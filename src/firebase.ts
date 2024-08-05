@@ -3,13 +3,15 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
+
+
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  apiKey: "AIzaSyC5EnBWVkYTA9lj8UoofSB7qAa8prAAQ18",
+  authDomain: "nwitter-reloaded-b028a.firebaseapp.com",
+  projectId: "nwitter-reloaded-b028a",
+  storageBucket: "nwitter-reloaded-b028a.appspot.com",
+  messagingSenderId: "445177327513",
+  appId: "1:445177327513:web:49e432da9c0a9a519b6d08"
 };
 
 const app = initializeApp(firebaseConfig);
