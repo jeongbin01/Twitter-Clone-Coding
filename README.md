@@ -13,7 +13,7 @@ Firebase를 통해 인증 및 데이터 저장을 처리하며, React를 사용�
 ## 프로젝트 기간
 
 - **개인 프로젝트 기간**: 2024.07.29 ~ 2024.08.05
-- **강의 출처**: eact와 Firebase로 트위터 클론 만들기는 [노마드 코더의 무료 React 및 Firebase 강의]([https://nomadcoders.co/](https://nomadcoders.co/nwitter))를 참고하여 개발하였습니다.
+- **강의 출처**: "React와 Firebase로 트위터 클론 만들기"는 [노마드 코더의 무료 React 및 Firebase 강의](https://nomadcoders.co/nwitter)를 참고하여 개발하였습니다.
 
 ## 주요 기능
 
