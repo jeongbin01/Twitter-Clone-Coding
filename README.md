@@ -1,30 +1,55 @@
 # React + TypeScript + Vite(수정 중)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 𝕏 클론 (Twitter Clone)
 
-Currently, two official plugins are available:
+Twitter의 주요 기능을 모방한 웹 애플리케이션입니다.<br>
+React를 프론트엔드 프레임워크로 사용하고, Firebase를 백엔드 및 인증 서비스로 활용하여 실시간 트윗 기능, 사용자 인증, 프로필 관리 등을 구현했습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 프로젝트 개요
 
-## Expanding the ESLint configuration
+사용자가 실시간으로 트윗을 작성하고 관리할 수 있는 기능을 제공하는 소셜 미디어 플랫폼입니다. Firebase를 활용하여 인증 및 데이터 저장을 처리하며, React를 사용하여 동적이고 반응형 사용자 인터페이스를 구현했습니다.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 주요 기능
 
-- Configure the top-level `parserOptions` property like this:
+- 사용자 인증 (회원가입, 로그인, 로그아웃)
+- 이메일 인증
+- 소셜 로그인 (GitHub, Google)
+- 트윗 작성, 수정, 삭제
+- 이미지 업로드 (트윗 및 프로필 사진)
+- 실시간 트윗 타임라인
+- 사용자 프로필 관리
+- 비밀번호 찾기/재설정
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## 기술 스택
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- React
+- Firebase (Authentication, Firestore, Storage)
+- styled-components
+- React Router
+- React Hook Form
+
+## 설치 및 실행
+
+1. 레포지토리 클론
+2. 디렉토리로 이동
+3. 의존성 설치
+4. Firebase 설정
+5. 앱 실행
+ 웹 브라우저에서 http://localhost:3000으로 애플리케이션을 열어 확인할 수 있습니다.
+
+## 리뷰 포인트컴포넌트 
+- 구조화: 컴포넌트의 재사용성 및 유지보수 용이성
+- Firebase 통합: Firebase와의 연동 및 실시간 데이터 처리
+- UI/UX 디자인: 사용자 경험을 고려한 직관적인 인터페이스
+- 반응형 디자인: 다양한 디바이스에서의 최적화된 사용자 경험
+
+## 부족한 점
+- 테스트 코드 부재: 자동화된 테스트가 부족합니다.
+- 상태 관리 라이브러리 미사용: Redux 또는 Recoil과 같은 상태 관리 라이브러리가 없습니다.
+- 접근성 고려 부족: 웹 접근성 관련 고려가 부족합니다.
+- 국제화(i18n) 미구현: 다국어 지원이 구현되어 있지 않습니다.
+- 성능 최적화: 메모이제이션, 코드 스플리팅 등 성능 최적화가 미비합니다
+
+## 히스토리
+이 코드에는 명시적인 버전 관리나 히스토리 정보가 포함되어 있지 않습니다. 그러나 코드의 구조와 사용된 기술로 보아 최신 React 및 Firebase SDK를 사용한 최근 개발된 프로젝트로 추정됩니다.<br>
+이 프로젝트는 Twitter의 핵심 기능을 구현하면서도 Firebase를 활용하여 백엔드 인프라를 간소화했습니다.<br> React와 현대적인 웹 개발 도구들을 사용하여 실시간 소셜 미디어 플랫폼의 기본적인 기능을 효과적으로 구현한 좋은 예시 프로젝트입니다.
