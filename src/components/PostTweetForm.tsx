@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { addDoc, collection, updateDoc } from "firebase/firestore";
 import { auth, db, storage } from "../firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { useForm } from "react-hook-form";
-import ReCAPTCHA from "react-google-recaptcha";
+
 // CSS
 import { Error } from "../styles/auth-components";
 import { FirebaseError } from "firebase/app";
@@ -79,9 +79,6 @@ export default function PostTweetForm() {
   const [isLoading, setIsLoading] = useState(false);
   const [file, setFile] = useState<File | null>(null);
 
-  // reCAPTCHA
-  const reCaptchaRef = useRef<ReCAPTCHA>(null);
-
   // <form>
   const {
     register,
@@ -107,24 +104,21 @@ export default function PostTweetForm() {
     if (!user || isLoading) return alert("Fail: Please refresh web site.");
     try {
       setIsLoading(true);
-      // Check reCAPTCHA
-      const token = await reCaptchaRef.current?.executeAsync();
-      if (!token)
-        throw setError("reCaptcha", { message: "Fail: reCAPTCHA error." });
       // Add tweet to DB
-      const doc = await addDoc(collection(db, "tweets"), {
+      const docRef = await addDoc(collection(db, "tweets"), {
         tweet,
         createdAt: Date.now(),
         username: user.displayName || "Anonymous",
         userId: user.uid,
       });
       if (file) {
-        const locationRef = ref(storage, `tweets/${user.uid}/${doc.id}`);
+        const locationRef = ref(storage, `tweets/${user.uid}/${docRef.id}`);
         const result = await uploadBytes(locationRef, file);
         const url = await getDownloadURL(result.ref);
-        await updateDoc(doc, { photo: url });
+        await updateDoc(docRef, { photo: url });
       }
       // Success
+      alert("Tweet posted successfully!");
       reset();
       setFile(null);
     } catch (error) {
@@ -132,7 +126,6 @@ export default function PostTweetForm() {
       if (error instanceof FirebaseError)
         setError("firebase", { message: error.message });
     } finally {
-      reCaptchaRef.current?.reset(); // Reset reCAPTCHA
       setIsLoading(false);
     }
   };
@@ -161,16 +154,6 @@ export default function PostTweetForm() {
           type="file"
           accept="image/*"
           id="file"
-        />
-        <ReCAPTCHA
-          style={{ display: "none" }}
-          ref={reCaptchaRef}
-          size="invisible"
-          sitekey={
-            import.meta.env.DEV
-              ? import.meta.env.VITE_FIREBASE_APPCHECK_DEV_PUBLIC_KEY
-              : import.meta.env.VITE_FIREBASE_APPCHECK_PUBLIC_KEY
-          }
         />
         <SubmitBtn
           type="submit"
