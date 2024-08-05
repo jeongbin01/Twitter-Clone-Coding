@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FirebaseError } from "firebase/app";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -17,20 +17,17 @@ import {
 import GithubBtn from "../components/GithubBtn";
 import FindPw from "../components/FindPw";
 import GoogleBtn from "./../components/GoogleBtn";
-import ReCAPTCHA from "react-google-recaptcha";
 
 interface IForm {
   email: string;
   password: string;
   firebase?: string;
-  reCaptcha?: string;
 }
 
 export default function CreateAccount() {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(false);
 
-  // <form>
   const {
     register,
     handleSubmit,
@@ -38,19 +35,10 @@ export default function CreateAccount() {
     setError,
   } = useForm<IForm>();
 
-  // reCAPTCHA
-  const reCaptchaRef = useRef<ReCAPTCHA>(null);
-
-  // Submit <form>
   const onSubmit = async ({ email, password }: IForm) => {
-    // Handle exception
     if (isLoading) return alert("Fail: It's currently loading..");
     try {
       setIsLoading(true);
-      // Check reCAPTCHA
-      const token = await reCaptchaRef.current?.executeAsync();
-      if (!token)
-        throw setError("reCaptcha", { message: "Fail: reCAPTCHA error." });
       // Log-In
       await signInWithEmailAndPassword(auth, email, password);
       if (!auth.currentUser?.emailVerified)
@@ -66,7 +54,6 @@ export default function CreateAccount() {
       if (e instanceof FirebaseError)
         setError("firebase", { message: e.message });
     } finally {
-      reCaptchaRef.current?.reset(); // Reset reCAPTCHA
       setIsLoading(false);
     }
   };
@@ -105,16 +92,6 @@ export default function CreateAccount() {
           autoComplete="current-password"
           required
         />
-        <ReCAPTCHA
-          // style={{ display: "none" }}
-          ref={reCaptchaRef}
-          size="invisible"
-          sitekey={
-            import.meta.env.DEV
-              ? import.meta.env.VITE_FIREBASE_APPCHECK_DEV_PUBLIC_KEY
-              : import.meta.env.VITE_FIREBASE_APPCHECK_PUBLIC_KEY
-          }
-        />
         <Input
           type="submit"
           value={isLoading ? "Loading.." : "Log In"}
@@ -124,7 +101,6 @@ export default function CreateAccount() {
       <Error>{errors.email?.message}</Error>
       <Error>{errors.password?.message}</Error>
       <Error>{errors.firebase?.message}</Error>
-      <Error>{errors.reCaptcha?.message}</Error>
 
       <Switcher>
         Don't have an account?&nbsp;
