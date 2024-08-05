@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 
-# 𝕏 클론 (Twitter Clone)
+# 𝕏 클론 코딩
 
 Twitter의 주요 기능을 모방한 소셜 미디어 플랫폼입니다.<br>
 React를 프론트엔드 프레임워크로 사용하고, Firebase를 백엔드 및 인증 서비스로 활용하여 실시간 트윗 기능, 사용자 인증, 프로필 관리 등을 구현했습니다.
