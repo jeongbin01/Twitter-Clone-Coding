@@ -30,11 +30,8 @@ Firebase를 통해 인증 및 데이터 저장을 처리하며, React를 사용�
 
 ## 기술 스택
 
-- React
-- Firebase (Authentication, Firestore, Storage)
-- styled-components
-- React Router
-- React Hook Form
+- **프론트엔드**: React, styled-components, React Router, React Hook Form
+- **백엔드**: Firebase (Authentication, Firestore, Storage)
 
 ## 리뷰 포인트
 
