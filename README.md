@@ -8,11 +8,6 @@ React를 프론트엔드 프레임워크로 사용하고, Firebase를 백엔드 
 사용자가 실시간으로 트윗을 작성하고 관리할 수 있는 기능을 제공합니다.<br>
 Firebase를 통해 인증 및 데이터 저장을 처리하며, React를 사용하여 동적이고 반응형 사용자 인터페이스를 구현했습니다.
 
-## 개발 서버
-
-- **로컬 개발 서버**: 애플리케이션을 로컬에서 실행하려면 아래의 URL에서 접근할 수 있습니다:
-  - 로그인 페이지: [http://localhost:5173/login](http://localhost:5173/login)
-
 ## 프로젝트 기간
 
 - **개인 프로젝트 기간**: 2024.07.29 ~ 2024.08.05
@@ -33,8 +28,17 @@ Firebase를 통해 인증 및 데이터 저장을 처리하며, React를 사용�
 
 ## 기술 스택
 
-- **프론트엔드**: React, styled-components, React Router, React Hook Form
-- **백엔드**: Firebase (Authentication, Firestore, Storage)
+- **프론트엔드**:
+  <div style="display: flex; gap: 10px; justify-content: center;">
+    <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white" alt="React"> 
+    <img src="https://img.shields.io/badge/styled--components-DB7093?style=flat&logo=styled-components&logoColor=white" alt="styled-components">
+    <img src="https://img.shields.io/badge/React%20Router-CA4245?style=flat&logo=react-router&logoColor=white" alt="React Router">
+    <img src="https://img.shields.io/badge/React%20Hook%20Form-EF4F6C?style=flat&logo=react-hook-form&logoColor=white" alt="React Hook Form">
+  </div>
+  - **백엔드**:
+  <div style="display: flex; gap: 10px; justify-content: center;">
+    <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=white" alt="Firebase">
+  </div>
 
 ## 리뷰 포인트
 
