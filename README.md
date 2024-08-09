@@ -30,11 +30,15 @@ Firebase를 통해 인증 및 데이터 저장을 처리하며, React를 사용�
 
 - **프론트엔드**:
   <div style="display: flex; gap: 10px; justify-content: center;">
-    <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white" alt="React"> 
+    <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white" alt="React">
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" alt="TypeScript">
+    <img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white" alt="Vite">
   </div>
-  - **백엔드**:
+
+- **백엔드**:
   <div style="display: flex; gap: 10px; justify-content: center;">
     <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=white" alt="Firebase">
+    <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js">
   </div>
 
 ## 리뷰 포인트
