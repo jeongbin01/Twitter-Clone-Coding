@@ -1,5 +1,3 @@
-# React + TypeScript + Vite
-
 # 𝕏 클론 코딩
 
 Twitter의 주요 기능을 모방한 소셜 미디어 플랫폼입니다.<br>
