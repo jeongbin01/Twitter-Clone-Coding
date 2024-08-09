@@ -34,7 +34,7 @@ Firebase를 통해 인증 및 데이터 저장을 처리하며, React를 사용�
   </div>
   - **백엔드**:
   <div style="display: flex; gap: 10px; justify-content: center;">
-    <img src="https://img.shields.io/badge/Firebase-FF0000?style=flat&logo=firebase&logoColor=white" alt="Firebase">
+    <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=white" alt="Firebase">
   </div>
 
 ## 리뷰 포인트
