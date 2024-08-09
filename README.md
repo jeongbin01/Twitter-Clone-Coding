@@ -31,13 +31,10 @@ Firebase를 통해 인증 및 데이터 저장을 처리하며, React를 사용�
 - **프론트엔드**:
   <div style="display: flex; gap: 10px; justify-content: center;">
     <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=white" alt="React"> 
-    <img src="https://img.shields.io/badge/styled--components-DB7093?style=flat&logo=styled-components&logoColor=white" alt="styled-components">
-    <img src="https://img.shields.io/badge/React%20Router-CA4245?style=flat&logo=react-router&logoColor=white" alt="React Router">
-    <img src="https://img.shields.io/badge/React%20Hook%20Form-EF4F6C?style=flat&logo=react-hook-form&logoColor=white" alt="React Hook Form">
   </div>
   - **백엔드**:
   <div style="display: flex; gap: 10px; justify-content: center;">
-    <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=white" alt="Firebase">
+    <img src="https://img.shields.io/badge/Firebase-FF0000?style=flat&logo=firebase&logoColor=white" alt="Firebase">
   </div>
 
 ## 리뷰 포인트
